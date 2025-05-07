@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
 <style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
+:where([class^="ri-"])::before { content: "\f3c2"; } /* TailwindCSS não sobrescreve o content por padrão, então pode ser necessário um seletor mais específico se os ícones não aparecerem. Porém, para remixicon, geralmente o CSS deles já cuida disso. */
 .hero-gradient {
 background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
 }
@@ -51,6 +51,7 @@ height: 20px;
 border: 2px solid #00F0FF;
 border-radius: 4px;
 position: relative;
+cursor: pointer;
 }
 .custom-checkbox:checked {
 background-color: #00F0FF;
@@ -83,14 +84,14 @@ transform: rotate(45deg);
 <a href="#contato" class="hover:text-primary transition duration-300">Contato</a>
 </nav>
 <div class="md:hidden flex items-center">
-<button class="text-white focus:outline-none">
-<div class="w-8 h-8 flex items-center justify-center">
+<button id="header-menu-button" class="text-white focus:outline-none"> <div class="w-8 h-8 flex items-center justify-center">
 <i class="ri-menu-line ri-2x"></i>
 </div>
 </button>
 </div>
 </div>
 </header>
+
 <section id="inicio" class="relative overflow-hidden">
 <div style="background-image: url('https://readdy.ai/api/search-image?query=A%20futuristic%20computer%20repair%20and%20gaming%20setup%20workshop%20with%20blue%20and%20pink%20neon%20lights%2C%20high-tech%20equipment%2C%20gaming%20computers%20with%20RGB%20lighting%2C%20repair%20tools%2C%20circuit%20boards%2C%20and%20a%20clean%20modern%20workspace.%20The%20left%20side%20has%20a%20gradient%20that%20fades%20smoothly%20to%20a%20solid%20color%20to%20allow%20text%20placement%2C%20while%20the%20right%20side%20shows%20the%20detailed%20tech%20workshop.%20Professional%20atmosphere%20with%20gaming%20peripherals%20and%20components%20visible&width=1920&height=1080&seq=2&orientation=landscape');" class="bg-cover bg-center h-[600px]">
 <div class="absolute inset-0 hero-gradient"></div>
@@ -106,6 +107,7 @@ transform: rotate(45deg);
 </div>
 </div>
 </section>
+
 <section id="servicos" class="py-16 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-12">
@@ -206,6 +208,7 @@ Saiba mais
 </div>
 </div>
 </section>
+
 <section id="sobre" class="py-16 bg-gray-50">
 <div class="container mx-auto px-4">
 <div class="flex flex-col lg:flex-row items-center gap-12">
@@ -259,97 +262,18 @@ Saiba mais
 </div>
 </div>
 </section>
+
 <section id="depoimentos" class="py-16 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-12">
 <h2 class="tech-font text-3xl md:text-4xl font-bold mb-4">O que nossos <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Clientes</span> dizem</h2>
 <p class="text-gray-600 max-w-2xl mx-auto">Confira os depoimentos de clientes satisfeitos com nossos serviços de manutenção e montagem de computadores.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-<div class="flex items-center mb-4">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-</div>
-<p class="text-gray-600 mb-6">"Montaram meu PC gamer com um excelente custo-benefício. O atendimento foi excepcional e o computador está rodando todos os jogos que eu queria com perfeição. Super recomendo!"</p>
-<div class="flex items-center">
-<div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold mr-3">RG</div>
-<div>
-<h4 class="font-bold">Rafael Gomes</h4>
-<p class="text-gray-500 text-sm">Cliente desde 2021</p>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-<div class="flex items-center mb-4">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-</div>
-<p class="text-gray-600 mb-6">"Meu notebook estava muito lento e achei que teria que comprar um novo. Levei na Poder de Deus T.I e eles fizeram uma manutenção completa. Agora está como novo e com um preço justo. Excelente serviço!"</p>
-<div class="flex items-center">
-<div class="w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center text-white font-bold mr-3">CS</div>
-<div>
-<h4 class="font-bold">Carla Santos</h4>
-<p class="text-gray-500 text-sm">Cliente desde 2020</p>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-<div class="flex items-center mb-4">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
-<i class="ri-star-fill"></i>
-</div>
-<div class="w-5 h-5 flex items-center justify-center text-gray-300 mr-1">
-<i class="ri-star-fill"></i>
-</div>
-</div>
-<p class="text-gray-600 mb-6">"Precisei emitir uma segunda via de boleto com urgência e o atendimento foi rápido e eficiente. Além disso, aproveitei para fazer uma manutenção no meu computador. Profissionais muito competentes!"</p>
-<div class="flex items-center">
-<div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold mr-3">MA</div>
-<div>
-<h4 class="font-bold">Marcos Almeida</h4>
-<p class="text-gray-500 text-sm">Cliente desde 2022</p>
-</div>
-</div>
-</div>
+<div id="depoimentos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 </div>
 </div>
 </section>
+
 <section class="py-16 bg-black relative overflow-hidden">
 <div class="absolute inset-0 opacity-20" style="background-image: url('https://readdy.ai/api/search-image?query=Abstract%20digital%20technology%20background%20with%20hexagonal%20patterns%2C%20circuit%20board%20elements%2C%20and%20blue%20and%20pink%20neon%20lights.%20Futuristic%20tech%20concept%20with%20geometric%20shapes%20and%20glowing%20elements.%20Clean%20design%20with%20space%20for%20text%20overlay&width=1920&height=600&seq=4&orientation=landscape'); background-size: cover; background-position: center;"></div>
 <div class="container mx-auto px-4 relative z-10">
@@ -368,6 +292,7 @@ Saiba mais
 </div>
 </div>
 </section>
+
 <section id="contato" class="py-16 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-12">
@@ -478,6 +403,7 @@ Saiba mais
 </div>
 </div>
 </section>
+
 <footer class="bg-black text-white pt-16 pb-8">
 <div class="container mx-auto px-4">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -560,6 +486,7 @@ Saiba mais
 </div>
 </div>
 </footer>
+
 <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden">
 <div class="container mx-auto px-4 py-6 h-full flex flex-col">
 <div class="flex justify-between items-center mb-8">
@@ -601,137 +528,257 @@ Saiba mais
 </div>
 </div>
 </div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-// Mobile menu toggle
-const mobileMenuButton = document.querySelector('header .md\\:hidden button'); // More specific selector for the header menu button
-const mobileMenu = document.getElementById('mobile-menu');
-const closeMenuButton = document.getElementById('close-menu');
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('header-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuButton = document.getElementById('close-menu');
 
-if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-    });
-}
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
 
-if (closeMenuButton && mobileMenu) {
-    closeMenuButton.addEventListener('click', function() {
-        mobileMenu.classList.add('hidden');
-    });
-}
-
-if (mobileMenu) {
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
+    if (closeMenuButton && mobileMenu) {
+        closeMenuButton.addEventListener('click', function() {
             mobileMenu.classList.add('hidden');
         });
-    });
-}
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href');
-const targetElement = document.querySelector(targetId);
-if (targetElement) {
-window.scrollTo({
-top: targetElement.offsetTop - 80, // Adjusted for sticky header (approx height of header)
-behavior: 'smooth'
-});
-}
-});
-});
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-// Form validation and WhatsApp redirection
-const contactForm = document.querySelector('#contato form');
-if (contactForm) {
-contactForm.addEventListener('submit', function(e) {
-e.preventDefault();
-const nome = document.getElementById('nome');
-const email = document.getElementById('email');
-const telefone = document.getElementById('telefone');
-const servico = document.getElementById('servico');
-const mensagem = document.getElementById('mensagem');
-const termos = document.getElementById('termos');
-let isValid = true;
-
-// Helper function to toggle error state
-function setErrorState(element, isError) {
-    if (isError) {
-        element.classList.add('ring-2', 'ring-red-500');
-        element.classList.remove('focus:ring-primary'); // Remove default focus style on error
-    } else {
-        element.classList.remove('ring-2', 'ring-red-500');
-        element.classList.add('focus:ring-primary'); // Restore default focus style
     }
-}
 
-// Validation checks
-setErrorState(nome, !nome.value.trim());
-isValid = isValid && !!nome.value.trim();
+    if (mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
 
-setErrorState(email, !email.value.trim() || !email.value.includes('@'));
-isValid = isValid && !!email.value.trim() && email.value.includes('@');
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                let headerOffset = 80; // Altura aproximada do header
+                const header = document.querySelector('header');
+                if (header) {
+                    headerOffset = header.offsetHeight;
+                }
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerOffset,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
-setErrorState(telefone, !telefone.value.trim());
-isValid = isValid && !!telefone.value.trim();
+    // Form validation and WhatsApp redirection
+    const contactForm = document.querySelector('#contato form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome');
+            const email = document.getElementById('email');
+            const telefone = document.getElementById('telefone');
+            const servico = document.getElementById('servico');
+            const mensagem = document.getElementById('mensagem');
+            const termos = document.getElementById('termos');
+            let isValid = true;
 
-setErrorState(servico, !servico.value);
-isValid = isValid && !!servico.value;
+            function setErrorState(element, isError, isCheckbox = false) {
+                if (isCheckbox) { // Para o checkbox, aplicar ao elemento e seu label indiretamente se necessário
+                    const label = element.nextElementSibling; // Assumindo que o label é o próximo irmão
+                    if (isError) {
+                        element.classList.add('ring-2', 'ring-red-500');
+                        if (label) label.classList.add('text-red-500');
+                    } else {
+                        element.classList.remove('ring-2', 'ring-red-500');
+                         if (label) label.classList.remove('text-red-500');
+                    }
+                } else {
+                     if (isError) {
+                        element.classList.add('ring-2', 'ring-red-500');
+                        element.classList.remove('focus:ring-primary');
+                    } else {
+                        element.classList.remove('ring-2', 'ring-red-500');
+                        element.classList.add('focus:ring-primary');
+                    }
+                }
+            }
 
-setErrorState(mensagem, !mensagem.value.trim());
-isValid = isValid && !!mensagem.value.trim();
+            setErrorState(nome, !nome.value.trim());
+            isValid = isValid && !!nome.value.trim();
 
-// For checkbox, the visual cue might be different (e.g., label color or border on a custom span)
-// For now, just using the setErrorState on the checkbox itself
-if (!termos.checked) {
-    isValid = false;
-    // It's good to have a visual indicator for the checkbox label too if needed
-    termos.classList.add('ring-2', 'ring-red-500'); // Example, might need styling for checkbox specifically
-} else {
-    termos.classList.remove('ring-2', 'ring-red-500');
-}
+            setErrorState(email, !email.value.trim() || !email.value.includes('@'));
+            isValid = isValid && !!email.value.trim() && email.value.includes('@');
 
+            setErrorState(telefone, !telefone.value.trim());
+            isValid = isValid && !!telefone.value.trim();
 
-if (isValid) {
-    const nomeCompleto = nome.value.trim();
-    const emailUsuario = email.value.trim();
-    const telefoneUsuario = telefone.value.trim();
-    const servicoInteresse = servico.options[servico.selectedIndex].text;
-    const mensagemUsuario = mensagem.value.trim();
+            setErrorState(servico, !servico.value);
+            isValid = isValid && !!servico.value;
 
-    const whatsappNumber = "552126767924"; // Seu número de WhatsApp
+            setErrorState(mensagem, !mensagem.value.trim());
+            isValid = isValid && !!mensagem.value.trim();
+            
+            setErrorState(termos, !termos.checked, true);
+            isValid = isValid && termos.checked;
 
-    let messageText = `Olá! Gostaria de fazer um contato através do site.\n\n`;
-    messageText += `Nome: ${nomeCompleto}\n`;
-    messageText += `E-mail: ${emailUsuario}\n`;
-    messageText += `Telefone: ${telefoneUsuario}\n`;
-    messageText += `Serviço de Interesse: ${servicoInteresse}\n`;
-    messageText += `Mensagem: ${mensagemUsuario}\n`;
+            if (isValid) {
+                const nomeCompleto = nome.value.trim();
+                const emailUsuario = email.value.trim();
+                const telefoneUsuario = telefone.value.trim();
+                const servicoInteresse = servico.options[servico.selectedIndex].text;
+                const mensagemUsuario = mensagem.value.trim();
+                const whatsappNumber = "552126767924";
 
-    const encodedMessage = encodeURIComponent(messageText);
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                let messageText = `Olá! Gostaria de fazer um contato através do site.\n\n`;
+                messageText += `Nome: ${nomeCompleto}\n`;
+                messageText += `E-mail: ${emailUsuario}\n`;
+                messageText += `Telefone: ${telefoneUsuario}\n`;
+                messageText += `Serviço de Interesse: ${servicoInteresse}\n`;
+                messageText += `Mensagem: ${mensagemUsuario}\n`;
 
-    window.open(whatsappURL, '_blank');
+                const encodedMessage = encodeURIComponent(messageText);
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                
+                window.open(whatsappURL, '_blank');
+                // alert('Você será redirecionado para o WhatsApp para enviar sua mensagem.'); // Opcional
+                contactForm.reset();
+                [nome, email, telefone, servico, mensagem].forEach(el => setErrorState(el, false));
+                setErrorState(termos, false, true); // Limpa estado de erro do checkbox
+            } else {
+                 // alert('Por favor, corrija os campos destacados e aceite os termos.'); // Opcional
+            }
+        });
+    }
 
-    alert('Você será redirecionado para o WhatsApp para enviar sua mensagem.');
-    contactForm.reset();
-    // Clear error states on successful submission
-    [nome, email, telefone, servico, mensagem, termos].forEach(el => setErrorState(el, false));
-    // Ensure checkbox specific error styling is also cleared if any was added
-    termos.classList.remove('ring-2', 'ring-red-500');
-} else {
-    // Optionally, alert the user that there are validation errors
-    // alert('Por favor, corrija os campos destacados e aceite os termos.');
-}
-});
-}
+    // --- Lógica dos Depoimentos Dinâmicos ---
+    const todosDepoimentos = [
+        {
+            estrelas: 5,
+            texto: "Montaram meu PC gamer com um excelente custo-benefício. O atendimento foi excepcional e o computador está rodando todos os jogos que eu queria com perfeição. Super recomendo!",
+            nome: "Rafael Gomes",
+            info: "Cliente desde 2021",
+            iniciais: "RG",
+            corIniciais: "from-primary to-secondary"
+        },
+        {
+            estrelas: 5,
+            texto: "Meu notebook estava muito lento e achei que teria que comprar um novo. Levei na Poder de Deus T.I e eles fizeram uma manutenção completa. Agora está como novo e com um preço justo. Excelente serviço!",
+            nome: "Carla Santos",
+            info: "Cliente desde 2020",
+            iniciais: "CS",
+            corIniciais: "from-secondary to-primary"
+        },
+        {
+            estrelas: 4,
+            texto: "Precisei emitir uma segunda via de boleto com urgência e o atendimento foi rápido e eficiente. Além disso, aproveitei para fazer uma manutenção no meu computador. Profissionais muito competentes!",
+            nome: "Marcos Almeida",
+            info: "Cliente desde 2022",
+            iniciais: "MA",
+            corIniciais: "from-primary to-secondary"
+        },
+        {
+            estrelas: 5,
+            texto: "Serviço de remoção de vírus impecável! Meu computador voltou a funcionar rapidamente e com segurança. Agradeço a toda equipe.",
+            nome: "Juliana Ferreira",
+            info: "Cliente desde 2023",
+            iniciais: "JF",
+            corIniciais: "from-secondary to-primary"
+        },
+        {
+            estrelas: 5,
+            texto: "A instalação do sistema operacional e dos programas que eu precisava foi feita com muita agilidade. Recomendo o serviço de instalação de software.",
+            nome: "Lucas Martins",
+            info: "Cliente desde 2022",
+            iniciais: "LM",
+            corIniciais: "from-primary to-secondary"
+        },
+        {
+            estrelas: 4,
+            texto: "O suporte técnico remoto me ajudou a resolver um problema chato no meu PC sem precisar sair de casa. Atendimento nota 10!",
+            nome: "Beatriz Costa",
+            info: "Cliente desde 2024",
+            iniciais: "BC",
+            corIniciais: "from-secondary to-primary"
+        },
+        {
+            estrelas: 5,
+            texto: "Atendimento de primeira e resolveram o problema do meu computador super rápido. Confiança total no trabalho deles!",
+            nome: "Fernando Oliveira",
+            info: "Cliente desde 2020",
+            iniciais: "FO",
+            corIniciais: "from-primary to-secondary"
+        },
+        {
+            estrelas: 5,
+            texto: "Recomendo a Poder de Deus T.I para quem busca qualidade e honestidade. Montaram uma máquina incrível para mim!",
+            nome: "Amanda Lima",
+            info: "Cliente desde 2023",
+            iniciais: "AL",
+            corIniciais: "from-secondary to-primary"
+        }
+    ];
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    function gerarEstrelasHTML(numEstrelas) {
+        let estrelasHTML = '';
+        for (let i = 0; i < 5; i++) {
+            estrelasHTML += `
+                <div class="w-5 h-5 flex items-center justify-center text-${i < numEstrelas ? 'primary' : 'gray-300'} mr-1">
+                    <i class="ri-star-fill"></i>
+                </div>
+            `;
+        }
+        return estrelasHTML;
+    }
+
+    function renderizarDepoimentos() {
+        const container = document.getElementById('depoimentos-container');
+        if (!container) return;
+
+        container.innerHTML = ''; // Limpa depoimentos existentes
+        shuffleArray(todosDepoimentos);
+
+        // Define quantos depoimentos mostrar, por exemplo, 6 ou menos se não houver tantos.
+        const depoimentosParaMostrar = todosDepoimentos.slice(0, Math.min(6, todosDepoimentos.length));
+
+        depoimentosParaMostrar.forEach(depoimento => {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300';
+            
+            const estrelasHTML = gerarEstrelasHTML(depoimento.estrelas);
+
+            card.innerHTML = `
+                <div class="flex items-center mb-4">
+                    ${estrelasHTML}
+                </div>
+                <p class="text-gray-600 mb-6">"${depoimento.texto}"</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r ${depoimento.corIniciais} rounded-full flex items-center justify-center text-white font-bold mr-3 text-lg">${depoimento.iniciais}</div>
+                    <div>
+                        <h4 class="font-bold">${depoimento.nome}</h4>
+                        <p class="text-gray-500 text-sm">${depoimento.info}</p>
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    renderizarDepoimentos(); // Chama a função para mostrar os depoimentos ao carregar a página
 });
 </script>
 </body>
