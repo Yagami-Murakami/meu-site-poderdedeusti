@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poder de Deus T.I - Manutenção e Montagem de Computadores</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#00F0FF',secondary:'#FF00FF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.hero-gradient {
+background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
+}
+.tech-font {
+font-family: 'Orbitron', sans-serif;
+}
+.hexagon {
+clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.glow {
+box-shadow: 0 0 15px rgba(0, 240, 255, 0.7);
+}
+.glow-pink {
+box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+}
+.neon-border {
+border: 1px solid #00F0FF;
+box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+.neon-border-pink {
+border: 1px solid #FF00FF;
+box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+input:focus {
+outline: none;
+box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.5);
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 240, 255, 0.3);
+}
+.custom-checkbox {
+appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #00F0FF;
+border-radius: 4px;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #00F0FF;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+left: 6px;
+top: 2px;
+width: 6px;
+height: 12px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<header class="bg-black text-white sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center">
+<img src="https://static.readdy.ai/image/dfe829091e9d261cca9417dfc6e5532b/19bf7d4774e57e67ab6e0e651ec6cb45.png" alt="Poder de Deus T.I Logo" class="h-12 mr-3">
+<h1 class="tech-font text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">PODER DE DEUS T.I</h1>
+</div>
+<nav class="hidden md:flex items-center space-x-6">
+<a href="#inicio" class="hover:text-primary transition duration-300">Início</a>
+<a href="#servicos" class="hover:text-primary transition duration-300">Serviços</a>
+<a href="#sobre" class="hover:text-primary transition duration-300">Sobre Nós</a>
+<a href="#depoimentos" class="hover:text-primary transition duration-300">Depoimentos</a>
+<a href="#contato" class="hover:text-primary transition duration-300">Contato</a>
+</nav>
+<div class="md:hidden flex items-center">
+<button class="text-white focus:outline-none">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line ri-2x"></i>
+</div>
+</button>
+</div>
+</div>
+</header>
+<section id="inicio" class="relative overflow-hidden">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=A%20futuristic%20computer%20repair%20and%20gaming%20setup%20workshop%20with%20blue%20and%20pink%20neon%20lights%2C%20high-tech%20equipment%2C%20gaming%20computers%20with%20RGB%20lighting%2C%20repair%20tools%2C%20circuit%20boards%2C%20and%20a%20clean%20modern%20workspace.%20The%20left%20side%20has%20a%20gradient%20that%20fades%20smoothly%20to%20a%20solid%20color%20to%20allow%20text%20placement%2C%20while%20the%20right%20side%20shows%20the%20detailed%20tech%20workshop.%20Professional%20atmosphere%20with%20gaming%20peripherals%20and%20components%20visible&width=1920&height=1080&seq=2&orientation=landscape');" class="bg-cover bg-center h-[600px]">
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="container mx-auto px-4 h-full flex items-center">
+<div class="w-full md:w-1/2 z-10">
+<h2 class="tech-font text-4xl md:text-5xl font-bold text-white mb-4">Soluções em <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Informática</span> e <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Gaming</span></h2>
+<p class="text-gray-200 text-lg mb-8">Manutenção especializada, montagem de computadores gamers e serviços financeiros para sua conveniência.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#servicos" class="bg-gradient-to-r from-primary to-secondary text-black font-bold py-3 px-8 !rounded-button hover:opacity-90 transition duration-300 text-center whitespace-nowrap glow">Nossos Serviços</a>
+<a href="#contato" class="bg-transparent border-2 border-primary text-white font-bold py-3 px-8 !rounded-button hover:bg-primary/10 transition duration-300 text-center whitespace-nowrap">Fale Conosco</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="servicos" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="tech-font text-3xl md:text-4xl font-bold mb-4">Nossos <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Serviços</span></h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Oferecemos soluções completas em informática, desde manutenção até montagem de computadores personalizados para gaming.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="service-card bg-white rounded-lg shadow-lg p-6 transition-all duration-300 neon-border">
+<div class="hexagon w-16 h-16 bg-gradient-to-r from-primary to-secondary flex items-center justify-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center text-white">
+<i class="ri-computer-line ri-2x"></i>
+</div>
+</div>
+<h3 class="tech-font text-xl font-bold mb-3">Manutenção de Computadores</h3>
+<p class="text-gray-600 mb-4">Diagnóstico e reparo de problemas de hardware e software, limpeza interna, atualização de componentes e otimização de desempenho.</p>
+<a href="#contato" class="text-primary font-semibold flex items-center hover:text-secondary transition duration-300">
+Saiba mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg p-6 transition-all duration-300 neon-border-pink">
+<div class="hexagon w-16 h-16 bg-gradient-to-r from-secondary to-primary flex items-center justify-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center text-white">
+<i class="ri-gamepad-line ri-2x"></i>
+</div>
+</div>
+<h3 class="tech-font text-xl font-bold mb-3">Montagem de PCs Gamers</h3>
+<p class="text-gray-600 mb-4">Montagem personalizada de computadores para jogos com componentes de alta performance, sistema de refrigeração eficiente e iluminação RGB.</p>
+<a href="#contato" class="text-secondary font-semibold flex items-center hover:text-primary transition duration-300">
+Saiba mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg p-6 transition-all duration-300 neon-border">
+<div class="hexagon w-16 h-16 bg-gradient-to-r from-primary to-secondary flex items-center justify-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center text-white">
+<i class="ri-file-list-3-line ri-2x"></i>
+</div>
+</div>
+<h3 class="tech-font text-xl font-bold mb-3">Segunda Via de Boletos</h3>
+<p class="text-gray-600 mb-4">Emissão rápida e segura de segunda via de boletos bancários, facilitando seus pagamentos sem complicações.</p>
+<a href="#contato" class="text-primary font-semibold flex items-center hover:text-secondary transition duration-300">
+Saiba mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg p-6 transition-all duration-300 neon-border-pink">
+<div class="hexagon w-16 h-16 bg-gradient-to-r from-secondary to-primary flex items-center justify-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center text-white">
+<i class="ri-install-line ri-2x"></i>
+</div>
+</div>
+<h3 class="tech-font text-xl font-bold mb-3">Instalação de Software</h3>
+<p class="text-gray-600 mb-4">Instalação e configuração de sistemas operacionais, programas e aplicativos essenciais para o funcionamento ideal do seu computador.</p>
+<a href="#contato" class="text-secondary font-semibold flex items-center hover:text-primary transition duration-300">
+Saiba mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg p-6 transition-all duration-300 neon-border">
+<div class="hexagon w-16 h-16 bg-gradient-to-r from-primary to-secondary flex items-center justify-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center text-white">
+<i class="ri-virus-line ri-2x"></i>
+</div>
+</div>
+<h3 class="tech-font text-xl font-bold mb-3">Remoção de Vírus</h3>
+<p class="text-gray-600 mb-4">Detecção e eliminação de vírus, malwares e outros programas maliciosos que podem comprometer a segurança do seu computador.</p>
+<a href="#contato" class="text-primary font-semibold flex items-center hover:text-secondary transition duration-300">
+Saiba mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg p-6 transition-all duration-300 neon-border-pink">
+<div class="hexagon w-16 h-16 bg-gradient-to-r from-secondary to-primary flex items-center justify-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center text-white">
+<i class="ri-customer-service-2-line ri-2x"></i>
+</div>
+</div>
+<h3 class="tech-font text-xl font-bold mb-3">Suporte Técnico</h3>
+<p class="text-gray-600 mb-4">Assistência técnica remota ou presencial para resolução de problemas e dúvidas relacionadas ao seu equipamento.</p>
+<a href="#contato" class="text-secondary font-semibold flex items-center hover:text-primary transition duration-300">
+Saiba mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id="sobre" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=A%20professional%20computer%20repair%20technician%20working%20on%20a%20gaming%20PC%20with%20RGB%20lighting%2C%20surrounded%20by%20computer%20parts%20and%20tools.%20The%20technician%20is%20wearing%20a%20professional%20uniform.%20The%20workspace%20is%20clean%20and%20organized%20with%20modern%20equipment.%20Blue%20and%20pink%20lighting%20accents%20in%20the%20background.%20High-quality%2C%20detailed%20image%20showing%20technical%20expertise&width=600&height=500&seq=3&orientation=landscape" alt="Equipe Poder de Deus T.I" class="rounded-lg shadow-xl object-cover object-top w-full">
+</div>
+<div class="lg:w-1/2">
+<h2 class="tech-font text-3xl md:text-4xl font-bold mb-6">Sobre a <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Poder de Deus T.I</span></h2>
+<p class="text-gray-600 mb-4">Fundada em 2012, a Poder de Deus T.I nasceu da paixão por tecnologia e do compromisso com a excelência em serviços de informática. Nossa missão é proporcionar soluções tecnológicas acessíveis e de alta qualidade para nossos clientes.</p>
+<p class="text-gray-600 mb-6">Contamos com uma equipe de profissionais altamente qualificados e apaixonados por tecnologia, sempre atualizados com as últimas tendências do mercado para oferecer o melhor serviço possível.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 text-primary">
+<i class="ri-check-line ri-2x"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Atendimento Personalizado</h3>
+<p class="text-gray-600 text-sm">Cada cliente recebe atenção exclusiva às suas necessidades.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 text-primary">
+<i class="ri-check-line ri-2x"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Garantia de Serviço</h3>
+<p class="text-gray-600 text-sm">Todos os nossos serviços possuem garantia de qualidade.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 text-primary">
+<i class="ri-check-line ri-2x"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Peças Originais</h3>
+<p class="text-gray-600 text-sm">Trabalhamos apenas com componentes de qualidade e originais.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 text-primary">
+<i class="ri-check-line ri-2x"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Preços Justos</h3>
+<p class="text-gray-600 text-sm">Oferecemos o melhor custo-benefício do mercado.</p>
+</div>
+</div>
+</div>
+<a href="#contato" class="bg-gradient-to-r from-primary to-secondary text-black font-bold py-3 px-8 !rounded-button hover:opacity-90 transition duration-300 inline-block whitespace-nowrap glow">Conheça Nossa Equipe</a>
+</div>
+</div>
+</div>
+</section>
+<section id="depoimentos" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="tech-font text-3xl md:text-4xl font-bold mb-4">O que nossos <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Clientes</span> dizem</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Confira os depoimentos de clientes satisfeitos com nossos serviços de manutenção e montagem de computadores.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+<div class="flex items-center mb-4">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Montaram meu PC gamer com um excelente custo-benefício. O atendimento foi excepcional e o computador está rodando todos os jogos que eu queria com perfeição. Super recomendo!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold mr-3">RG</div>
+<div>
+<h4 class="font-bold">Rafael Gomes</h4>
+<p class="text-gray-500 text-sm">Cliente desde 2021</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+<div class="flex items-center mb-4">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Meu notebook estava muito lento e achei que teria que comprar um novo. Levei na Poder de Deus T.I e eles fizeram uma manutenção completa. Agora está como novo e com um preço justo. Excelente serviço!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center text-white font-bold mr-3">CS</div>
+<div>
+<h4 class="font-bold">Carla Santos</h4>
+<p class="text-gray-500 text-sm">Cliente desde 2020</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+<div class="flex items-center mb-4">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-gray-300 mr-1">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Precisei emitir uma segunda via de boleto com urgência e o atendimento foi rápido e eficiente. Além disso, aproveitei para fazer uma manutenção no meu computador. Profissionais muito competentes!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold mr-3">MA</div>
+<div>
+<h4 class="font-bold">Marcos Almeida</h4>
+<p class="text-gray-500 text-sm">Cliente desde 2022</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-black relative overflow-hidden">
+<div class="absolute inset-0 opacity-20" style="background-image: url('https://readdy.ai/api/search-image?query=Abstract%20digital%20technology%20background%20with%20hexagonal%20patterns%2C%20circuit%20board%20elements%2C%20and%20blue%20and%20pink%20neon%20lights.%20Futuristic%20tech%20concept%20with%20geometric%20shapes%20and%20glowing%20elements.%20Clean%20design%20with%20space%20for%20text%20overlay&width=1920&height=600&seq=4&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="container mx-auto px-4 relative z-10">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="tech-font text-3xl md:text-4xl font-bold text-white mb-6">Pronto para <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">potencializar</span> seu computador?</h2>
+<p class="text-gray-300 mb-8">Entre em contato conosco hoje mesmo e descubra como podemos ajudar você a ter a melhor experiência com seu equipamento.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="#contato" class="bg-gradient-to-r from-primary to-secondary text-black font-bold py-3 px-8 !rounded-button hover:opacity-90 transition duration-300 text-center whitespace-nowrap glow">Solicitar Orçamento</a>
+<a href="tel:+552126797624" class="bg-transparent border-2 border-primary text-white font-bold py-3 px-8 !rounded-button hover:bg-primary/10 transition duration-300 flex items-center justify-center whitespace-nowrap">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-line"></i>
+</div>
+21 2679-7624
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id="contato" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="tech-font text-3xl md:text-4xl font-bold mb-4">Entre em <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Contato</span></h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Estamos prontos para atender suas necessidades. Preencha o formulário abaixo ou utilize um de nossos canais de atendimento.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<form class="bg-white rounded-lg shadow-lg p-8 neon-border">
+<div class="mb-6">
+<label for="nome" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+<input type="text" id="nome" class="w-full px-4 py-3 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary text-sm" placeholder="Seu nome completo">
+</div>
+<div class="mb-6">
+<label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+<input type="email" id="email" class="w-full px-4 py-3 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary text-sm" placeholder="seu.email@exemplo.com">
+</div>
+<div class="mb-6">
+<label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+<input type="tel" id="telefone" class="w-full px-4 py-3 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary text-sm" placeholder="(00) 00000-0000">
+</div>
+<div class="mb-6">
+<label for="servico" class="block text-gray-700 font-medium mb-2">Serviço de Interesse</label>
+<div class="relative">
+<select id="servico" class="w-full px-4 py-3 border-none bg-gray-50 rounded appearance-none focus:ring-2 focus:ring-primary text-sm pr-8">
+<option value="" disabled selected>Selecione um serviço</option>
+<option value="manutencao">Manutenção de Computadores</option>
+<option value="montagem">Montagem de PC Gamer</option>
+<option value="boletos">Segunda Via de Boletos</option>
+<option value="software">Instalação de Software</option>
+<option value="virus">Remoção de Vírus</option>
+<option value="suporte">Suporte Técnico</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<label for="mensagem" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+<textarea id="mensagem" rows="4" class="w-full px-4 py-3 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary text-sm" placeholder="Descreva sua necessidade..."></textarea>
+</div>
+<div class="mb-6 flex items-start">
+<input type="checkbox" id="termos" class="custom-checkbox mr-3 mt-1">
+<label for="termos" class="text-gray-600 text-sm">Concordo com a <a href="#" class="text-primary hover:underline">Política de Privacidade</a> e os <a href="#" class="text-primary hover:underline">Termos de Uso</a>.</label>
+</div>
+<button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-black font-bold py-3 px-6 !rounded-button hover:opacity-90 transition duration-300 whitespace-nowrap glow">Enviar Mensagem</button>
+</form>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-white rounded-lg shadow-lg p-8 mb-8 neon-border-pink">
+<h3 class="tech-font text-xl font-bold mb-6">Informações de Contato</h3>
+<div class="flex items-start mb-6">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-gradient-to-r from-primary to-secondary rounded-full text-white">
+<i class="ri-map-pin-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Endereço</h4>
+<p class="text-gray-600">Av.Automovel Club Km 48 LT 24 QD 26</p>
+<p class="text-gray-600">Duque de Caxias - RJ, 25260-000</p>
+</div>
+</div>
+<div class="flex items-start mb-6">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-gradient-to-r from-secondary to-primary rounded-full text-white">
+<i class="ri-phone-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Telefone</h4>
+<p class="text-gray-600">21 2679-7624</p>
+</div>
+</div>
+<div class="flex items-start mb-6">
+    <div class="w-10 h-10 flex items-center justify-center mr-4 bg-gradient-to-r from-primary to-secondary rounded-full text-white">
+        <i class="ri-whatsapp-line"></i>
+    </div>
+    <div>
+        <h4 class="font-bold mb-1">WhatsApp</h4>
+        <a href="https://wa.me/552126767924" target="_blank" class="text-gray-600 hover:text-primary transition duration-300">21 2676-7924</a>
+    </div>
+</div>
+<div class="flex items-start mb-6">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-gradient-to-r from-primary to-secondary rounded-full text-white">
+<i class="ri-mail-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">E-mail</h4>
+<p class="text-gray-600">poderdedeusti@gmail.com</p>
+<p class="text-gray-600"></p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-gradient-to-r from-secondary to-primary rounded-full text-white">
+<i class="ri-time-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Horário de Funcionamento</h4>
+<p class="text-gray-600">Segunda a Sexta: 10:00 - 18:00</p>
+<p class="text-gray-600">Sábado: 10:00 - 14:00</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden h-64 neon-border">
+<a href="https://www.google.com/maps/place/Poder+De+Deus+T.I/@-22.640633,-43.2814285,1066m/data=!3m2!1e3!4b1!4m6!3m5!1s0x99733c21eacf09:0xfe19d9189582c191!8m2!3d-22.6406331!4d-43.2765576!16s%2Fg%2F11f26429xk?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" data-readdy="true">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.8893008272527!2d-43.281428500000004!3d-22.640633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99733c21eacf09%3A0xfe19d9189582c191!2sPoder%20De%20Deus%20T.I!5e0!3m2!1spt-BR!2sbr!4v1683147265021!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-black text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="flex items-center mb-6">
+<img src="https://static.readdy.ai/image/dfe829091e9d261cca9417dfc6e5532b/19bf7d4774e57e67ab6e0e651ec6cb45.png" alt="Poder de Deus T.I Logo" class="h-10 mr-3">
+<h3 class="tech-font text-xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">PODER DE DEUS T.I</h3>
+</div>
+<p class="text-gray-400 mb-6">Soluções completas em informática, montagem de computadores e serviços financeiros com qualidade e compromisso.</p>
+<div class="flex space-x-4">
+<a href="https://www.facebook.com/poderkjr" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://www.instagram.com/poderdedeusti/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://wa.me/552126767924" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<i class="ri-whatsapp-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<i class="ri-youtube-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-6">Links Rápidos</h3>
+<ul class="space-y-3">
+<li><a href="#inicio" class="text-gray-400 hover:text-primary transition duration-300">Início</a></li>
+<li><a href="#servicos" class="text-gray-400 hover:text-primary transition duration-300">Serviços</a></li>
+<li><a href="#sobre" class="text-gray-400 hover:text-primary transition duration-300">Sobre Nós</a></li>
+<li><a href="#depoimentos" class="text-gray-400 hover:text-primary transition duration-300">Depoimentos</a></li>
+<li><a href="#contato" class="text-gray-400 hover:text-primary transition duration-300">Contato</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-6">Serviços</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Manutenção de Computadores</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Montagem de PCs Gamers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Segunda Via de Boletos</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Instalação de Software</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Remoção de Vírus</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Suporte Técnico</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Inscreva-se para receber nossas novidades e promoções exclusivas.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Seu e-mail" class="w-full px-4 py-2 bg-gray-800 border-none rounded-l text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+<button type="submit" class="bg-gradient-to-r from-primary to-secondary text-black font-bold px-4 !rounded-r-button whitespace-nowrap">Inscrever</button>
+</div>
+</form>
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-visa-fill ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-mastercard-fill ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-paypal-fill ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-bank-card-fill ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Poder de Deus T.I. Todos os direitos reservados.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-primary transition duration-300 text-sm">Política de Privacidade</a>
+<a href="#" class="text-gray-400 hover:text-primary transition duration-300 text-sm">Termos de Uso</a>
+<a href="#" class="text-gray-400 hover:text-primary transition duration-300 text-sm">Mapa do Site</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden">
+<div class="container mx-auto px-4 py-6 h-full flex flex-col">
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=A%20modern%203D%20hexagonal%20logo%20with%20tech%20aesthetic%2C%20featuring%20gradient%20colors%20of%20turquoise%20blue%20and%20neon%20pink%2C%20geometric%20patterns%20inside%20the%20hexagon%2C%20clean%20and%20professional%20design%2C%20suitable%20for%20a%20computer%20services%20company%2C%20digital%20tech%20style&width=60&height=60&seq=6&orientation=squarish" alt="Poder de Deus T.I Logo" class="h-10 mr-3">
+<h1 class="tech-font text-xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">PODER DE DEUS T.I</h1>
+</div>
+<button id="close-menu" class="text-white focus:outline-none">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line ri-2x"></i>
+</div>
+</button>
+</div>
+<nav class="flex-1 flex flex-col justify-center">
+<ul class="space-y-6 text-center">
+<li><a href="#inicio" class="text-white text-2xl hover:text-primary transition duration-300">Início</a></li>
+<li><a href="#servicos" class="text-white text-2xl hover:text-primary transition duration-300">Serviços</a></li>
+<li><a href="#sobre" class="text-white text-2xl hover:text-primary transition duration-300">Sobre Nós</a></li>
+<li><a href="#depoimentos" class="text-white text-2xl hover:text-primary transition duration-300">Depoimentos</a></li>
+<li><a href="#contato" class="text-white text-2xl hover:text-primary transition duration-300">Contato</a></li>
+</ul>
+</nav>
+<div class="mt-8 text-center">
+<p class="text-gray-400 mb-4">Siga-nos nas redes sociais</p>
+<div class="flex justify-center space-x-4">
+<a href="https://www.facebook.com/poderkjr" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://www.instagram.com/poderdedeusti/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://wa.me/552126767924" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<i class="ri-whatsapp-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<i class="ri-youtube-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const mobileMenuButton = document.querySelector('header .md\\:hidden button'); // More specific selector for the header menu button
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMenuButton = document.getElementById('close-menu');
+
+if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+}
+
+if (closeMenuButton && mobileMenu) {
+    closeMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+    });
+}
+
+if (mobileMenu) {
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+}
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Adjusted for sticky header (approx height of header)
+behavior: 'smooth'
+});
+}
+});
+});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+// Form validation and WhatsApp redirection
+const contactForm = document.querySelector('#contato form');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const nome = document.getElementById('nome');
+const email = document.getElementById('email');
+const telefone = document.getElementById('telefone');
+const servico = document.getElementById('servico');
+const mensagem = document.getElementById('mensagem');
+const termos = document.getElementById('termos');
+let isValid = true;
+
+// Helper function to toggle error state
+function setErrorState(element, isError) {
+    if (isError) {
+        element.classList.add('ring-2', 'ring-red-500');
+        element.classList.remove('focus:ring-primary'); // Remove default focus style on error
+    } else {
+        element.classList.remove('ring-2', 'ring-red-500');
+        element.classList.add('focus:ring-primary'); // Restore default focus style
+    }
+}
+
+// Validation checks
+setErrorState(nome, !nome.value.trim());
+isValid = isValid && !!nome.value.trim();
+
+setErrorState(email, !email.value.trim() || !email.value.includes('@'));
+isValid = isValid && !!email.value.trim() && email.value.includes('@');
+
+setErrorState(telefone, !telefone.value.trim());
+isValid = isValid && !!telefone.value.trim();
+
+setErrorState(servico, !servico.value);
+isValid = isValid && !!servico.value;
+
+setErrorState(mensagem, !mensagem.value.trim());
+isValid = isValid && !!mensagem.value.trim();
+
+// For checkbox, the visual cue might be different (e.g., label color or border on a custom span)
+// For now, just using the setErrorState on the checkbox itself
+if (!termos.checked) {
+    isValid = false;
+    // It's good to have a visual indicator for the checkbox label too if needed
+    termos.classList.add('ring-2', 'ring-red-500'); // Example, might need styling for checkbox specifically
+} else {
+    termos.classList.remove('ring-2', 'ring-red-500');
+}
+
+
+if (isValid) {
+    const nomeCompleto = nome.value.trim();
+    const emailUsuario = email.value.trim();
+    const telefoneUsuario = telefone.value.trim();
+    const servicoInteresse = servico.options[servico.selectedIndex].text;
+    const mensagemUsuario = mensagem.value.trim();
+
+    const whatsappNumber = "552126767924"; // Seu número de WhatsApp
+
+    let messageText = `Olá! Gostaria de fazer um contato através do site.\n\n`;
+    messageText += `Nome: ${nomeCompleto}\n`;
+    messageText += `E-mail: ${emailUsuario}\n`;
+    messageText += `Telefone: ${telefoneUsuario}\n`;
+    messageText += `Serviço de Interesse: ${servicoInteresse}\n`;
+    messageText += `Mensagem: ${mensagemUsuario}\n`;
+
+    const encodedMessage = encodeURIComponent(messageText);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank');
+
+    alert('Você será redirecionado para o WhatsApp para enviar sua mensagem.');
+    contactForm.reset();
+    // Clear error states on successful submission
+    [nome, email, telefone, servico, mensagem, termos].forEach(el => setErrorState(el, false));
+    // Ensure checkbox specific error styling is also cleared if any was added
+    termos.classList.remove('ring-2', 'ring-red-500');
+} else {
+    // Optionally, alert the user that there are validation errors
+    // alert('Por favor, corrija os campos destacados e aceite os termos.');
+}
+});
+}
+});
+</script>
+</body>
+</html>
