@@ -370,7 +370,7 @@ Saiba mais
     </div>
     <div>
         <h4 class="font-bold mb-1">WhatsApp</h4>
-        <a href="https://wa.me/552126767924" target="_blank" class="text-gray-600 hover:text-primary transition duration-300">21 2676-7924</a>
+        <a href="https://wa.me/552126797624" target="_blank" class="text-gray-600 hover:text-primary transition duration-300">21 2679-7624</a>
     </div>
 </div>
 <div class="flex items-start mb-6">
@@ -420,7 +420,7 @@ Saiba mais
 <a href="https://www.instagram.com/poderdedeusti/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
 <i class="ri-instagram-line"></i>
 </a>
-<a href="https://wa.me/552126767924" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<a href="https://wa.me/552126797624" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
 <i class="ri-whatsapp-line"></i>
 </a>
 <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
@@ -518,7 +518,7 @@ Saiba mais
 <a href="https://www.instagram.com/poderdedeusti/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
 <i class="ri-instagram-line"></i>
 </a>
-<a href="https://wa.me/552126767924" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
+<a href="https://wa.me/552126797624" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
 <i class="ri-whatsapp-line"></i>
 </a>
 <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition duration-300 text-white">
@@ -598,10 +598,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (label) label.classList.add('text-red-500');
                     } else {
                         element.classList.remove('ring-2', 'ring-red-500');
-                         if (label) label.classList.remove('text-red-500');
+                        if (label) label.classList.remove('text-red-500');
                     }
                 } else {
-                     if (isError) {
+                    if (isError) {
                         element.classList.add('ring-2', 'ring-red-500');
                         element.classList.remove('focus:ring-primary');
                     } else {
@@ -635,7 +635,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const telefoneUsuario = telefone.value.trim();
                 const servicoInteresse = servico.options[servico.selectedIndex].text;
                 const mensagemUsuario = mensagem.value.trim();
-                const whatsappNumber = "552126767924";
+                const whatsappNumber = "552126797624"; // <-- NÚMERO DO WHATSAPP ATUALIZADO AQUI
 
                 let messageText = `Olá! Gostaria de fazer um contato através do site.\n\n`;
                 messageText += `Nome: ${nomeCompleto}\n`;
@@ -653,7 +653,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 [nome, email, telefone, servico, mensagem].forEach(el => setErrorState(el, false));
                 setErrorState(termos, false, true); // Limpa estado de erro do checkbox
             } else {
-                 // alert('Por favor, corrija os campos destacados e aceite os termos.'); // Opcional
+                // alert('Por favor, corrija os campos destacados e aceite os termos.'); // Opcional
             }
         });
     }
